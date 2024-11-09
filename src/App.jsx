@@ -63,11 +63,13 @@ function App() {
         };
 
         const stockKey = keyMap[trimmedKey] || trimmedKey;
-        const stockValue = stock[stockKey];
+        var stockValue = stock[stockKey];
         
         // Handle the case where the stock value doesn't exist
         if (stockValue === undefined || stockValue === null) return false;
-
+        if (stockKey == "Market Capitalization (B)") {
+          stockValue = parseFloat(stockValue* 1000)  // Convert to crores
+        }
         // Parse the comparison value
         const comparisonValue = parseNumericValue(value);
         const stockNumericValue = parseNumericValue(stockValue);
