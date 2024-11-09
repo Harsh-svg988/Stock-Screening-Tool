@@ -1,0 +1,255 @@
+/* src/components/StockTable.css */
+.Query-results{
+    background: #edeff3;
+    padding-top: 0%;
+}
+.stock-table-container {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+
+  }
+  
+  /* Header Styles */
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .table-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+  }
+  
+  .save-button {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  .save-button:hover {
+    background-color: #4f46e5;
+  }
+  
+  /* Controls Styles */
+  .table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .results-info {
+    color: #666666;
+    font-size: 14px;
+  }
+  
+  .control-buttons {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .control-button {
+    padding: 8px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: white;
+    color: #374151;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  .control-button:hover {
+    background-color: #f9fafb;
+  }
+  
+  /* Table Styles */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 0 -24px;
+  }
+  
+  .stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 1200px; /* Ensure horizontal scroll on smaller screens */
+  }
+  
+  .stock-table th,
+  .stock-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .stock-table th {
+    background-color: #f9fafb;
+    color: #374151;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  .stock-table tbody tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  .stock-name {
+    color: #6366f1;
+    cursor: pointer;
+  }
+  
+  .stock-name:hover {
+    text-decoration: underline;
+  }
+  
+  .right-align {
+    text-align: right;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .stock-table-container {
+      padding: 16px;
+      margin: 10px;
+    }
+  
+    .table-wrapper {
+      margin: 0 -16px;
+    }
+  
+    .stock-table {
+      font-size: 13px;
+    }
+  
+    .stock-table th,
+    .stock-table td {
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .table-controls {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+  
+    .control-buttons {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  
+    .control-button {
+      flex: 1;
+      min-width: 120px;
+      justify-content: center;
+    }
+  
+    .table-header {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+  
+    .save-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  /* Pagination Styles */
+.pagination-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .pagination-footer button {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .pagination-footer button:disabled {
+    background-color: #d1d5db; /* Light gray for disabled state */
+    cursor: not-allowed;
+  }
+  
+  .pagination-footer button:not(:disabled):hover {
+    background-color: #4f46e5;
+  }
+  
+  .pagination-footer span {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .pagination-controls select {
+    padding: 6px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: white;
+    color: #374151;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .pagination-controls select:hover {
+    background-color: #f9fafb;
+  }
+  
+  /* Responsive Pagination Styles */
+  @media (max-width: 768px) {
+    .pagination-footer {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .pagination-controls {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+  .stock-table th {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .stock-table th:hover {
+    background-color: #f3f4f6;
+  }
+  
