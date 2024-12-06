@@ -31,9 +31,8 @@ const CreateSearchQuery = ({ runQuery }) => {
               <div className="example-card">
                 <h3 className='example'>Custom query example</h3>
                 <div className="example-text">
-                  <p>Market Capitalization {'>'} 500 AND</p>
-                  <p>P/E Ratio {'<'} 15 AND</p>
-                  <p>ROE {'>'} 22%</p>
+                  <p>ROE {'>'} 22 AND</p>
+                  <p>P/E Ratio {'<'} 15 </p>
                 </div>
               </div>
             </div>
